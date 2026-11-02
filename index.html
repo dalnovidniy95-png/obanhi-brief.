@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Бриф на ИИ-агента в Instagram · Обанхи</title>
+<meta name="description" content="Бриф на ИИ-агента в Instagram для Обанхи. 8 коротких блоков, 10–12 минут.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F2F6FC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Бриф на ИИ-агента в Instagram · Обанхи">
+<meta property="og:description" content="Ответьте на вопросы, и я соберу агента, который отвечает клиентам и не теряет заказы.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23ffffff'/%3E%3Cpath d='M8 33 L20 7 L32 33' fill='none' stroke='%2315306F' stroke-width='4.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.2 23.4 Q20 28.6 26.8 23.4' fill='none' stroke='%232457D6' stroke-width='3.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ================= ДИЗАЙН-ТОКЕНЫ ================= */
+:root{
+  --bg:#F2F6FC;
+  --surface:#FFFFFF;
+  --surface-2:#F7FAFE;
+  --tint:#E6EEFA;
+  --ink:#0E1C38;
+  --ink-2:#2B3A57;
+  --muted:#5A6A86;
+  --line:#D6E0EE;
+  --line-2:#B9C8DF;
+  --navy:#15306F;
+  --navy-2:#1C3D8C;
+  --blue:#2457D6;
+  --blue-soft:rgba(36,87,214,.14);
+  --danger:#B3263A;
+  --danger-line:#E7B4BC;
+  --danger-soft:#FCF0F2;
+  --ok:#1C6E4C;
+  --ok-soft:#EAF5EF;
+  --ok-line:#BFE0CE;
+  --r-lg:20px;
+  --r:14px;
+  --r-sm:12px;
+  --shadow:0 1px 2px rgba(14,28,56,.04),0 10px 28px -16px rgba(14,28,56,.18);
+  --font:'Golos Text',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --display:'Unbounded','Golos Text',system-ui,sans-serif;
+  --side-w:232px;
+  --gap:56px;
+  --content:704px;
+}
+
+/* ================= БАЗА ================= */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:110px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ================= ШАПКА ================= */
+.top{position:sticky;top:0;z-index:30;padding:calc(10px + env(safe-area-inset-top)) 16px 0}
+.top-in{max-width:1180px;margin:0 auto;position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px 14px;background:rgba(255,255,255,.9);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{width:40px;height:40px;flex:0 0 auto;display:block}
+.brand-name{font-family:var(--display);font-weight:400;font-size:19px;line-height:1.1;color:var(--navy);letter-spacing:.01em}
+.brand-sub{font-size:12.5px;color:var(--muted);letter-spacing:.06em;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meter{text-align:right;flex:0 0 auto}
+.meter-txt{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
+.meter-txt b{color:var(--navy);font-weight:700}
+.meter-time{font-size:12px;color:var(--muted);margin-top:3px}
+.bar{position:absolute;left:18px;right:18px;bottom:0;height:3px;background:var(--tint);border-radius:3px 3px 0 0;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--navy);transition:width .45s cubic-bezier(.2,.7,.2,1)}
+
+/* ================= РАСКЛАДКА ================= */
+.layout{max-width:1180px;margin:0 auto;padding:30px 16px calc(130px + env(safe-area-inset-bottom));display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);gap:var(--gap)}
+.main{min-width:0;max-width:var(--content)}
+
+/* ================= БОКОВОЕ МЕНЮ ================= */
+.side{position:sticky;top:112px;align-self:start;display:flex;flex-direction:column;gap:4px}
+.side-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:13px 14px;border-radius:12px;border:1px solid transparent;background:none;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--muted);cursor:pointer;text-align:left;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:background .15s,color .15s,border-color .15s}
+.side-btn.on{background:#fff;color:var(--navy);border-color:var(--line);box-shadow:var(--shadow)}
+.cnt{font-variant-numeric:tabular-nums;font-size:12px;letter-spacing:.02em;font-weight:600;white-space:nowrap}
+.cnt.miss{color:var(--danger)}
+.cnt.done{color:var(--blue)}
+@media (hover:hover){.side-btn:not(.on):hover{color:var(--ink);background:rgba(255,255,255,.6)}}
+
+/* ================= БЛОК ================= */
+.blk{display:none}
+.blk.on{display:block;animation:blkIn .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes blkIn{from{opacity:.25;transform:translateY(10px)}to{opacity:1;transform:none}}
+.kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:4px 0 0}
+.kick b{color:var(--navy);font-weight:700}
+.blk-title{font-family:var(--display);font-weight:300;font-size:clamp(27px,5.2vw,50px);line-height:1.1;letter-spacing:-.005em;text-transform:uppercase;margin:12px 0 14px;color:var(--ink);overflow-wrap:break-word}
+.lead{color:var(--ink-2);font-size:16.5px;max-width:580px;margin:0 0 26px;line-height:1.55}
+.note{background:var(--tint);border-radius:16px;padding:16px 18px;color:var(--ink-2);font-size:15px;margin:0 0 16px;line-height:1.55}
+.note b{color:var(--navy)}
+
+/* ================= ВОПРОС ================= */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 26px 26px;margin-bottom:14px;display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;scroll-margin-top:120px;transition:border-color .25s,box-shadow .25s,background .25s}
+.q.need{border-color:var(--danger-line);background:#FFFDFD}
+.q.flash{box-shadow:0 0 0 4px var(--blue-soft);border-color:var(--blue)}
+.qn{font-size:13px;color:var(--muted);font-weight:600;padding-top:3px;font-variant-numeric:tabular-nums}
+.q.need .qn{color:var(--danger)}
+.qc{min-width:0}
+.qt{font-size:17.5px;font-weight:600;line-height:1.35;margin:0;color:var(--ink)}
+.req{color:var(--danger);margin-left:5px}
+.qh{font-size:14.5px;color:var(--muted);margin:6px 0 0;line-height:1.5}
+.qb{margin-top:16px}
+.need-msg{display:none;font-size:13.5px;color:var(--danger);margin-top:10px}
+.q.need .need-msg{display:block}
+
+/* ================= ПОЛЯ ================= */
+.inp{display:block;width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--surface-2);border:1.5px solid var(--line);border-radius:var(--r-sm);padding:14px 16px;outline:none;transition:border-color .15s,background .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+textarea.inp{min-height:108px;resize:vertical;line-height:1.5;overflow:hidden}
+.inp::placeholder{color:#8794AA;opacity:1}
+.inp:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px var(--blue-soft)}
+.other{margin-top:10px}
+
+/* ================= ВАРИАНТЫ ОТВЕТА ================= */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opts.chips{flex-direction:row;flex-wrap:wrap}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:12px 16px;border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--surface-2);font-size:15.5px;line-height:1.35;color:var(--ink);text-align:left;cursor:pointer;transition:background .15s,border-color .15s,color .15s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.chips .opt{width:auto;max-width:100%;min-height:46px;padding:10px 16px}
+.opt .ind{flex:0 0 auto;width:20px;height:20px;border:1.5px solid #9AACC9;border-radius:50%;display:grid;place-items:center;background:#fff;transition:border-color .15s,background .15s}
+.opt .ind::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--navy);transform:scale(0);transition:transform .15s}
+.opt.multi .ind{border-radius:6px}
+.opt.multi .ind::after{display:none}
+.opt .ind svg{width:13px;height:13px;opacity:0;transition:opacity .12s}
+.opt.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.opt.on .ind{border-color:#fff}
+.opt.on .ind::after{transform:scale(1)}
+.opt.multi.on .ind svg{opacity:1}
+.opt:focus-visible,.btn:focus-visible,.side-btn:focus-visible,.miss-chip:focus-visible,.reset:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media (hover:hover){.opt:not(.on):hover{border-color:var(--line-2);background:#fff}}
+
+/* ================= ГРУППЫ ПОЛЕЙ ================= */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:block;min-width:0}
+.fld.full{grid-column:1/-1}
+.fl{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:7px}
+.fl .req{margin-left:3px}
+
+/* ================= НИЖНЯЯ ПАНЕЛЬ ================= */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(242,246,252,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.dock-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);gap:var(--gap)}
+.dock-btns{display:flex;gap:12px;max-width:var(--content)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--r-sm);font-weight:600;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border:1.5px solid transparent;transition:background .15s,color .15s,border-color .15s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;min-width:172px;text-align:center;line-height:1.2}
+.btn svg{width:16px;height:16px;flex:0 0 auto;transition:transform .2s}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-main{background:var(--navy);color:#fff}
+.btn-light{background:var(--tint);color:var(--navy);border-color:var(--tint)}
+.btn[disabled]{opacity:.4;cursor:default}
+@media (hover:hover){
+  .btn-main:hover{background:var(--navy-2)}
+  .btn-main:hover svg{transform:translateX(3px)}
+  .btn-ghost:hover{border-color:var(--line-2)}
+  .btn-light:hover{border-color:var(--line-2)}
+}
+
+/* ================= ОТПРАВКА ================= */
+.status{border-radius:var(--r-lg);padding:20px 22px;margin-bottom:22px;border:1px solid}
+.status.bad{background:var(--danger-soft);border-color:var(--danger-line)}
+.status.good{background:var(--ok-soft);border-color:var(--ok-line)}
+.status h3{margin:0;font-size:16.5px;font-weight:600}
+.status.bad h3{color:var(--danger)}
+.status.good h3{color:var(--ok)}
+.status p{margin:6px 0 0;font-size:14.5px;color:var(--ink-2)}
+.miss-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.miss-chip{background:#fff;border:1px solid var(--danger-line);border-radius:10px;padding:9px 13px;font-size:14px;color:var(--ink);cursor:pointer;text-align:left;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+@media (hover:hover){.miss-chip:hover{border-color:var(--danger)}}
+.steps{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.steps li::before{counter-increment:s;content:counter(s) ".";font-weight:700;color:var(--navy)}
+.steps b{color:var(--ink)}
+.sum-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 8px}
+.summary{display:block;width:100%;min-height:320px;max-height:460px;font:inherit;font-size:14.5px;line-height:1.55;border:1.5px solid var(--line);border-radius:var(--r);padding:16px;background:#fff;color:var(--ink);resize:vertical;outline:none;overflow:auto}
+.summary:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+.send{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.send .wide{grid-column:1/-1}
+.send .btn{min-width:0;width:100%}
+.reset{display:inline-block;margin-top:22px;background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:14px;cursor:pointer;padding:8px 0}
+
+/* ================= ОКНО ПОДТВЕРЖДЕНИЯ ================= */
+.modal{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(14,28,56,.42);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .2s}
+.modal.show{opacity:1;pointer-events:auto}
+.modal-box{width:100%;max-width:420px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px 22px;box-shadow:0 24px 60px -24px rgba(14,28,56,.45);transform:translateY(10px);transition:transform .2s}
+.modal.show .modal-box{transform:none}
+.modal-box h3{margin:0;font-size:19px;font-weight:600;line-height:1.35;color:var(--ink)}
+.modal-box p{margin:8px 0 0;font-size:15px;line-height:1.5;color:var(--muted)}
+.modal-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.modal-btns .btn{min-width:0;width:100%}
+.btn-danger{background:var(--danger);color:#fff}
+@media (hover:hover){.btn-danger:hover{background:#9A1F31}}
+
+/* ================= УВЕДОМЛЕНИЕ ================= */
+.toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translate(-50%,12px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14.5px;line-height:1.4;width:max-content;max-width:calc(100vw - 32px);text-align:center;pointer-events:none;transition:opacity .25s,transform .25s;z-index:60}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ================= ТЕЛЕФОН И ПЛАНШЕТ ================= */
+@media (max-width:959px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:14px}
+  .main{max-width:none}
+  .side{position:static;flex-direction:row;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:2px 16px 8px;gap:8px}
+  .side::-webkit-scrollbar{display:none}
+  .side-btn{flex:0 0 auto;width:auto;white-space:nowrap;background:rgba(255,255,255,.65);border-color:var(--line);padding:11px 14px;font-size:12px}
+  .dock-in{grid-template-columns:minmax(0,1fr)}
+  .dock-spacer{display:none}
+  .dock-btns{max-width:none}
+  .dock-btns .btn{flex:1;min-width:0}
+}
+@media (max-width:600px){
+  .top{padding:calc(8px + env(safe-area-inset-top)) 10px 0}
+  .top-in{padding:10px 14px 12px;border-radius:16px}
+  .mark{width:34px;height:34px}
+  .brand-name{font-size:17px}
+  .brand-sub{font-size:12px;letter-spacing:.02em}
+  .meter-txt{font-size:12px;letter-spacing:.06em}
+  .meter-word,.meter-time{display:none}
+  .layout{padding-left:12px;padding-right:12px}
+  .side{margin:0 -12px;padding-left:12px;padding-right:12px}
+  .q{padding:20px 16px 20px;grid-template-columns:24px minmax(0,1fr);column-gap:6px;border-radius:16px}
+  .qt{font-size:16.5px}
+  .lead{font-size:15.5px}
+  .opt{font-size:15px;padding:12px 14px}
+  .chips .opt{padding:10px 14px}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+  .send{grid-template-columns:minmax(0,1fr)}
+  .dock{padding-left:12px;padding-right:12px}
+  .btn{padding:0 16px;letter-spacing:.1em}
+  .summary{min-height:260px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ================= ДОБАВЛЕНО: варианты с описанием ================= */
+.opt .ot{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.opt .ov{display:block}
+.opt .od{display:block;font-size:13.5px;color:var(--muted);line-height:1.45}
+.opt .otag{flex:0 0 auto;align-self:center;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--navy);background:var(--tint);border-radius:8px;padding:5px 9px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.opt.on .otag{background:#fff}
+
+/* ================= ДОБАВЛЕНО: проверка полей ================= */
+.inp.bad{border-color:var(--danger);background:#FFFDFD}
+.inp.bad:focus{box-shadow:0 0 0 4px rgba(179,38,58,.12)}
+.err{display:none;font-size:13.5px;color:var(--danger);margin-top:7px;line-height:1.4}
+.err.show{display:block}
+.chk{display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 14px;border:1.5px dashed var(--line-2);border-radius:var(--r-sm);background:#fff;cursor:pointer;font-size:15px;color:var(--ink-2);-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+.chk input{width:20px;height:20px;margin:0;accent-color:var(--navy);flex:0 0 auto}
+.chk.on{border-style:solid;border-color:var(--navy);color:var(--ink)}
+
+/* ================= ДОБАВЛЕНО: стартовый экран ================= */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 22px}
+.cards.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:17px;font-weight:600;color:var(--ink);line-height:1.3}
+.card p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.card .price{margin-top:auto;padding-top:8px;font-weight:600;color:var(--navy);font-size:15px;font-variant-numeric:tabular-nums}
+.card .price small{display:block;font-weight:500;color:var(--muted);font-size:13px;margin-top:2px}
+.card .who{font-size:13.5px;color:var(--muted)}
+.sec-h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:26px 0 12px}
+.path{list-style:none;margin:0 0 6px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;counter-reset:p}
+.path li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 13px;font-size:14px;color:var(--ink-2);line-height:1.45}
+.path li::before{counter-increment:p;content:"0" counter(p);display:block;font-family:var(--display);font-weight:300;font-size:20px;color:var(--navy);margin-bottom:6px}
+.path b{display:block;color:var(--ink);font-weight:600;font-size:15px;margin-bottom:2px}
+.faq{display:grid;gap:8px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 16px}
+.faq summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:600;font-size:15.5px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;font-weight:400;color:var(--navy);flex:0 0 auto;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 15px;font-size:15px;color:var(--ink-2);line-height:1.55}
+.plates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}
+.plate{border-radius:var(--r);background:var(--tint);padding:13px 14px;font-size:14px;color:var(--ink-2);line-height:1.45}
+.plate b{display:block;color:var(--navy);font-size:15px}
+
+/* ================= ДОБАВЛЕНО: финал ================= */
+.rec{border-radius:var(--r-lg);padding:20px 22px;margin-bottom:14px;background:var(--surface);border:1.5px solid var(--navy)}
+.rec .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rec h3{margin:6px 0 0;font-size:19px;font-weight:600;color:var(--navy);line-height:1.3}
+.rec p{margin:6px 0 0;font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.rec .later{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.review{display:grid;gap:8px;margin:0 0 22px}
+.rv{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 12px 12px 16px}
+.rv-t{font-size:15px;font-weight:600;color:var(--ink);min-width:0}
+.rv-t small{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
+.rv-t small.bad{color:var(--danger)}
+.rv-b{flex:0 0 auto;background:var(--tint);border:0;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);cursor:pointer;-webkit-tap-highlight-color:transparent}
+@media (hover:hover){.rv-b:hover{background:#D9E4F6}}
+.kick .eta{color:var(--muted);font-weight:600}
+
+@media (max-width:959px){
+  .cards.three{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .path{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .plates{grid-template-columns:minmax(0,1fr)}
+  .opt .otag{font-size:11.5px;padding:4px 7px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M8 33 L20 7 L32 33" fill="none" stroke="#15306F" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.2 23.4 Q20 28.6 26.8 23.4" fill="none" stroke="#2457D6" stroke-width="3.6" stroke-linecap="round"/>
+      </svg>
+      <div style="min-width:0">
+        <div class="brand-name">Adlan</div>
+        <div class="brand-sub">Бриф на ИИ-агента · Обанхи</div>
+      </div>
+    </div>
+    <div class="meter">
+      <div class="meter-txt"><span class="meter-word">Заполнено </span><b id="mDone">0</b> из <b id="mTotal">0</b></div>
+      <div class="meter-time" id="mSaved">10–12 минут</div>
+    </div>
+    <div class="bar" aria-hidden="true"><i id="mBar"></i></div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="side" id="side" aria-label="Блоки брифа"></nav>
+  <main class="main" id="main"></main>
+</div>
+
+<div class="dock">
+  <div class="dock-in">
+    <div class="dock-spacer"></div>
+    <div class="dock-btns">
+      <button type="button" class="btn btn-ghost" id="prev">Назад</button>
+      <button type="button" class="btn btn-main" id="next">Дальше
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="resetModal" role="dialog" aria-modal="true" aria-labelledby="resetTitle" aria-hidden="true">
+  <div class="modal-box">
+    <h3 id="resetTitle">Вы действительно хотите очистить бриф и начать заново?</h3>
+    <p>Все ответы удалятся, вернуть их будет нельзя.</p>
+    <div class="modal-btns">
+      <button type="button" class="btn btn-ghost" id="resetNo">Нет</button>
+      <button type="button" class="btn btn-danger" id="resetYes">Да</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+function inc(v, x){ return Array.isArray(v) && v.indexOf(x) !== -1; }
+function t(v){ return typeof v === 'string' ? v.trim() : ''; }
+
+/* ================= НАСТРОЙКИ: меняй здесь ================= */
+var CONFIG = {
+  whatsapp: '79667279553',      // номер для кнопки WhatsApp, без +, пробелов и восьмёрки
+  telegram: 'AdlanMz',          // ник в Telegram без @
+  storageKey: 'adlan_brief_obanhi_v2',
+  duration: '10–12 минут',
+  summaryTitle: '💧 БРИФ: ИИ-АГЕНТ В INSTAGRAM · ОБАНХИ',
+  filesHint: 'прайс, фото продукции и 3–5 скриншотов типичных переписок с клиентами (имена и телефоны лучше закрасить).'
+};
+
+/* ================= ЦЕНЫ И ВАРИАНТЫ ================= */
+var PRICE = {
+  agent: '60\u00A0000\u00A0₽',
+  month: '10\u00A0000\u00A0₽ в месяц',
+  insta: '2\u00A0000–4\u00A0000\u00A0₽ в месяц',
+  waOff: 'около 6\u00A0000\u00A0₽ в месяц и 5–6\u00A0₽ за сообщение',
+  waUnoff: 'около 700–1\u00A0000\u00A0₽ в месяц'
+};
+var WA = {
+  off:   'Официальное подключение',
+  unoff: 'Неофициальное подключение',
+  dunno: 'Посоветуйте'
+};
+var REMIND_YES = 'Да, тем, кто сам согласился';
+
+/* ================= СТАРТОВЫЙ ЭКРАН ================= */
+var INTRO =
+  '<div class="cards three">' +
+    '<div class="card"><h3>ИИ-агент в Instagram</h3><p>Круглые сутки отвечает в директе и на комментарии, рассказывает о воде, ценах и доставке, ведёт клиента до заказа и передаёт готовый заказ сотруднику.</p><p class="who">Плюс сервис подключения Instagram: ' + PRICE.insta + ', зависит от количества диалогов.</p><p class="price">' + PRICE.agent + '<small>разово, плюс сопровождение ' + PRICE.month + '</small></p></div>' +
+    '<div class="card"><h3>WhatsApp официально</h3><p>Всё то же самое, плюс можно напоминать постоянным клиентам, которые сами на это согласились. Риска блокировки нет.</p><p class="who">Нужен, только если планируете напоминания клиентам. Для уведомлений сотрудникам хватает неофициального подключения. Нужны отдельный номер и проверка компании.</p><p class="price">' + PRICE.waOff + '<small>оплата сервису, отдельно от агента</small></p></div>' +
+    '<div class="card"><h3>WhatsApp неофициально</h3><p>Только уведомления сотрудникам о новых заказах, без рассылок. Работает с отдельной симки.</p><p class="who">Номер блокируют за массовые рассылки и сообщения незнакомым людям. Уведомления своим сотрудникам, которые сохранили номер, к этому не относятся, поэтому риск небольшой. Если номер всё же заблокируют, заказы не теряются: подключаем новую симку.</p><p class="price">' + PRICE.waUnoff + '<small>оплата сервису, отдельно от агента</small></p></div>' +
+  '</div>' +
+  '<p class="sec-h">Как работает агент</p>' +
+  '<ol class="path">' +
+    '<li><b>Комментарий</b>Клиент пишет под постом, агент отвечает «Ответили вам в директ» и пишет ему</li>' +
+    '<li><b>Директ</b>Отвечает своими словами на вопросы о воде, ценах и доставке</li>' +
+    '<li><b>Заказ</b>Уточняет, что и сколько, адрес, время, телефон, и сверяет с клиентом</li>' +
+    '<li><b>Сотруднику</b>Сразу отправляет в WhatsApp уведомление о новом заказе</li>' +
+    '<li><b>Подтверждение</b>Сотрудник отвечает «+», агент пишет клиенту, что заказ принят</li>' +
+    '<li><b>Учёт</b>Каждый заказ сохраняется в базе на сервере в России</li>' +
+  '</ol>' +
+  '<p class="sec-h">Частые вопросы</p>' +
+  '<div class="faq">' +
+    '<details><summary>Что увидит сотрудник?</summary><p>В WhatsApp: номер заказа, что и сколько, когда доставить. Имя, телефон и адрес клиента через WhatsApp не пересылаются, сотрудник видит их в директе Instagram. В MAX: полный заказ сразу с именем, адресом и телефоном, потому что MAX российский и данные остаются в России. В обоих случаях сотрудник отвечает «+», и агент сам пишет клиенту, что заказ подтверждён.</p></details>' +
+    '<details><summary>За что могут заблокировать, а за что нет?</summary><p><b>Instagram.</b> Не блокируют: агент подключён официально и отвечает только тем, кто сам написал в директ или оставил комментарий. Блокируют за массовые сообщения незнакомым людям, накрутку подписчиков и вход в аккаунт через серые сервисы по паролю. Этого мы не делаем.</p><p><b>WhatsApp без официального подключения.</b> Не блокируют за короткие уведомления о заказах 1–3 своим сотрудникам, которые сохранили номер у себя. Блокируют за массовые рассылки, сообщения людям, у которых номера нет в контактах, и жалобы «это спам». Поэтому через такой номер рассылки клиентам не делаем, только уведомления сотрудникам.</p><p><b>WhatsApp официально.</b> Не блокируют, рассылки разрешены по одобренным шаблонам и только тем клиентам, которые сами согласились.</p></details>' +
+    '<details><summary>Что если клиент недоволен или агент не знает ответа?</summary><p>Агент сразу передаёт разговор сотруднику и не отвечает наугад. Жалобы на вкус, осадок или опоздание всегда уходят человеку.</p></details>' +
+    '<details><summary>Где хранятся заказы и данные клиентов?</summary><p>На сервере в России. Перед тем как спросить адрес и телефон, агент даёт клиенту ссылку на согласие на обработку данных. Работает на российской нейросети.</p></details>' +
+    '<details><summary>За что ежемесячная оплата?</summary><p>За работу нейросети и моё сопровождение: слежу за ответами агента, правлю и дорабатываю их. Сервисы подключения Instagram и WhatsApp оплачиваются отдельно по их тарифам.</p></details>' +
+  '</div>' +
+  '<div class="plates">' +
+    '<div class="plate"><b>10–12 минут</b>Почти все ответы в одно касание</div>' +
+    '<div class="plate"><b>Только нужное</b>Ответили «нет», лишних вопросов не будет</div>' +
+    '<div class="plate"><b>Можно прерваться</b>Ответы сохраняются на этом устройстве</div>' +
+  '</div>';
+
+/* ================= ВОПРОСЫ ================= */
+var BLOCKS = [
+{
+  id:'start', nav:'Как это устроено', title:'Агент для Обанхи', emoji:'',
+  lead:'По этим ответам я соберу ИИ-агента под вашу воду: что он отвечает, как оформляет заказ и куда его передаёт. Вопросы со звёздочкой обязательные, остальные по желанию.',
+  info: INTRO, q:[]
+},
+{
+  id:'company', nav:'О компании', title:'О компании', emoji:'🏭',
+  lead:'Коротко, чтобы агент правильно отвечал, кто вы и где находитесь.',
+  q:[
+    {id:'name', type:'text', req:1, s:'Название', title:'Как агенту называть компанию в разговоре с клиентами?', ph:'Обанхи'},
+    {id:'address', type:'textarea', s:'Адреса', title:'Адрес офиса и производства', hint:'Агент назовёт его, если клиент спросит, где вы находитесь.', ph:'Офис: Назрань, ул. Картоева, 140\nПроизводство: с. Армхи'},
+    {id:'hours', type:'text', req:1, s:'Приём заказов', title:'В какие дни и часы вы принимаете заказы?', ph:'Ежедневно 8:00–20:00'},
+    {id:'site', type:'text', s:'Сайт', title:'Сайт', ph:'obanhi.com', inputmode:'url', check:'url'},
+    {id:'sell_to', type:'multi', chips:1, req:1, other:1, s:'Кому продают', title:'Кому вы продаёте больше всего?', hint:'Можно выбрать несколько.', options:['Людям домой','Офисам','Магазинам оптом','Кафе и ресторанам','Другое']}
+  ]
+},
+{
+  id:'insta', nav:'Instagram', title:'Instagram', emoji:'📱',
+  lead:'Здесь решаем, как агент работает в вашем Instagram и кто из людей рядом с ним.',
+  q:[
+    {id:'smm', type:'single', req:1, s:'Кто ведёт Instagram', title:'Кто будет вести Instagram: посты, рилс, сторис?', options:['Сами','SMM-специалист','Пока никто, ищем человека']},
+    {id:'ads', type:'single', s:'Реклама', title:'Планируете рекламу?', hint:'С 1 сентября 2025 года платная реклама внутри Instagram запрещена законом. Агент работает с теми, кто приходит из ваших постов, рилс и сторис, а рекламу можно запускать на других площадках.', options:['Нет, только свои посты и рилс','Да, на других площадках','Пока не знаем']},
+    {id:'watcher', type:'single', req:1, s:'Кто смотрит Instagram', title:'Будет ли кто-то из сотрудников заглядывать в Instagram?', options:['Да, каждый день','Иногда','Нет, всё ведёт агент']},
+    {id:'access', type:'single', req:1, s:'Доступ к аккаунту', title:'Есть ли у сотрудников доступ к аккаунту Обанхи на телефоне?', hint:'Он нужен, чтобы сотрудник открыл директ и увидел адрес и телефон клиента.', options:['Да, есть','Пока нет, дадим доступ','Нет и не планируем']},
+    {id:'volume', type:'single', chips:1, s:'Сообщений в день', title:'Сколько сообщений и комментариев приходит в день?', hint:'Примерно. От этого зависит тариф сервиса подключения Instagram.', options:['До 10','10–30','30–100','Больше 100','Не знаю']},
+    {id:'comments', type:'single', s:'Какие комментарии', title:'На какие комментарии агенту отвечать?', options:[
+      {v:'На все, где спрашивают про воду, цену или доставку', d:'Под комментарием пишет «Ответили вам в директ» и продолжает разговор там'},
+      {v:'Только под постами, которые мы укажем'},
+      {v:'Посоветуйте'}
+    ]},
+    {id:'faq', type:'textarea', req:1, s:'Частые вопросы', title:'Какие вопросы клиенты задают чаще всего?', hint:'Напишите 5–10 вопросов так, как их пишут клиенты. На них агент будет отвечать в первую очередь.', ph:'Сколько стоит 19 литров?\nДоставка бесплатная?\nЕсть залог за бутыль?\nМожно сегодня к вечеру?\nКакая минерализация?'}
+  ]
+},
+{
+  id:'goods', nav:'Вода и цены', title:'Вода и цены', emoji:'💧',
+  lead:'Агент называет только те цены и факты, которые вы здесь напишете. Ничего не придумывает.',
+  q:[
+    {id:'prices', type:'group', req:1, any:1, s:'Цены', title:'Цены на воду и напитки', hint:'Заполните то, что продаёте сейчас.', fields:[
+      {id:'p19', label:'19 л', ph:'200 ₽'},
+      {id:'p5', label:'5 л', ph:'80 ₽'},
+      {id:'p15', label:'1,5 л', ph:'40 ₽'},
+      {id:'p05', label:'0,5 л', ph:'25 ₽'},
+      {id:'pglass', label:'Стекло 0,5 л', ph:'60 ₽'},
+      {id:'pdrinks', label:'Напитки: тархун, лимон, груша, персик', ph:'0,5 л: 50 ₽, персик 1,5 л: 90 ₽', full:1}
+    ]},
+    {id:'deposit', type:'single', req:1, s:'Залог за бутыль', title:'Есть ли залог за бутыль 19 л?', options:['Да','Нет, меняем полную на пустую','Нет залога']},
+    {id:'deposit_sum', type:'text', s:'Сумма залога', title:'Сколько стоит залог?', ph:'300 ₽', show:function(a){ return a.deposit === 'Да'; }},
+    {id:'minorder', type:'text', s:'Минимальный заказ', title:'Есть ли минимальный заказ?', ph:'От 2 бутылей по 19 л или нет'},
+    {id:'opt', type:'single', s:'Цены для организаций', title:'Есть ли отдельные цены для офисов и магазинов?', options:['Да','Нет']},
+    {id:'opt_text', type:'textarea', s:'Условия для организаций', title:'Какие условия для офисов и магазинов?', ph:'От 10 бутылей: 180 ₽ за штуку\nСчёт и договор для юрлиц', show:function(a){ return a.opt === 'Да'; }},
+    {id:'water_info', type:'textarea', s:'О воде', title:'Что агент должен знать о самой воде?', hint:'Откуда вода, минерализация, сертификаты. Только то, в чём вы уверены: агент будет повторять это клиентам. На сайте сейчас указаны разные цифры минерализации (90 и 250 мг/л), напишите верную.', ph:'Вода из ...\nМинерализация ... мг/л\nЕсть сертификат ...'}
+  ]
+},
+{
+  id:'delivery', nav:'Доставка', title:'Доставка', emoji:'🚚',
+  lead:'Чтобы агент честно говорил, когда и куда приедет вода.',
+  q:[
+    {id:'zone', type:'single', req:1, other:1, s:'Куда доставляют', title:'Куда вы доставляете?', options:['По всей Ингушетии','Назрань и ближайшие сёла','Другое']},
+    {id:'free', type:'single', req:1, s:'Стоимость доставки', title:'Доставка бесплатная?', options:['Да, всегда','Бесплатно от определённой суммы','Платная']},
+    {id:'free_terms', type:'text', s:'Условия доставки', title:'Какие условия?', ph:'Бесплатно от 2 бутылей, иначе 100 ₽', show:function(a){ return !!a.free && a.free !== 'Да, всегда'; }},
+    {id:'door', type:'single', s:'До двери', title:'Доставка до двери?', options:['Да, до двери и на этаж','До подъезда','По-разному']},
+    {id:'days', type:'text', req:1, s:'Дни и часы доставки', title:'В какие дни и часы возите воду?', ph:'Пн–Сб 9:00–19:00'},
+    {id:'sameday', type:'single', s:'В день заказа', title:'Можно получить воду в день заказа?', options:['Да, если заказать до определённого часа','Только на следующий день','По-разному']},
+    {id:'sameday_time', type:'text', s:'До какого часа', title:'До какого часа нужно заказать, чтобы привезли сегодня?', ph:'До 14:00', show:function(a){ return a.sameday === 'Да, если заказать до определённого часа'; }},
+    {id:'night', type:'single', req:1, s:'Ночные заказы', title:'Что делать с заказами, которые приходят ночью?', options:[
+      {v:'Агент оформляет заказ, сотрудник подтверждает утром', d:'Клиент сразу получает ответ и знает, что заказ принят в работу'},
+      {v:'Агент отвечает на вопросы, а заказ берём утром'}
+    ]},
+    {id:'pay', type:'multi', chips:1, s:'Оплата', title:'Как клиент платит?', options:['Наличными курьеру','Переводом','Картой курьеру','По счёту для организаций']}
+  ]
+},
+{
+  id:'agent', nav:'Как отвечает агент', title:'Как отвечает агент', emoji:'🤖',
+  lead:'Здесь решаем, что агент спрашивает при заказе, каким тоном говорит и что передаёт людям.',
+  q:[
+    {id:'fields', type:'multi', req:1, s:'Что спрашивает при заказе', title:'Что агент уточняет при заказе?', hint:'Можно выбрать несколько.', options:['Что и сколько','Адрес','Подъезд, этаж, домофон','Удобное время','Телефон','Имя','Способ оплаты','Забрать ли пустые бутыли']},
+    {id:'tone', type:'single', chips:1, s:'Тон', title:'Как обращаться к клиентам?', options:['На «вы», тепло','На «вы», официально']},
+    {id:'lang', type:'single', chips:1, s:'Язык', title:'На каком языке отвечать?', options:['Только русский','Русский и другой язык']},
+    {id:'lang_other', type:'text', s:'Второй язык', title:'Какой второй язык?', show:function(a){ return a.lang === 'Русский и другой язык'; }},
+    {id:'complaint', type:'single', req:1, other:1, s:'Кому жалобы', title:'Кому агент передаёт жалобы и сложные вопросы?', hint:'Например, жалобы на вкус, осадок или опоздание. На такие сообщения агент сам не отвечает, а сразу зовёт человека.', options:['Сотруднику, который принимает заказы','Руководителю','Другое']},
+    {id:'complaint_phone', type:'text', s:'Номер для жалоб', title:'На какой номер WhatsApp отправлять жалобы?', ph:'+7 900 000-00-00', inputmode:'tel', check:'phone'},
+    {id:'forbidden', type:'textarea', s:'О чём не говорить', title:'О чём агент не должен говорить сам?', hint:'Такие вопросы он сразу передаст сотруднику.', ph:'Не обещать точное время доставки\nНе давать скидки от себя'},
+    {id:'consent', type:'single', s:'Согласие на обработку данных', title:'Есть ли у вас согласие на обработку персональных данных отдельным документом?', hint:'Перед тем как спросить адрес и телефон, агент даёт клиенту ссылку на это согласие. С 1 сентября 2025 года оно должно быть отдельным документом, а не строчкой в политике.', options:['Есть отдельный документ','Есть только на сайте, вместе с политикой','Нет, нужно подготовить','Не знаю']}
+  ]
+},
+{
+  id:'wa', nav:'Заказы сотрудникам', title:'Куда приходят заказы', emoji:'🔔',
+  lead:'Агент работает только в Instagram. Готовый заказ он сразу отправляет сотруднику в WhatsApp или в MAX. Ниже примеры, как это выглядит.',
+  note:'<b>Пример 1. Заказ в WhatsApp</b> (без данных клиента)<br>Новый заказ №17<br>3 бутыли по 19 л, завтра 10:00–12:00<br>Адрес и телефон в директе Instagram<br>Ответьте «+», чтобы подтвердить<br><i>Сотрудник отвечает «+» прямо в WhatsApp, и агент сам пишет клиенту в директ: «Заказ подтверждён, привезём завтра с 10 до 12». Instagram сотрудник открывает только чтобы посмотреть адрес и телефон для водителя.</i><br><br><b>Пример 2. Заказ в MAX</b> (полный, с данными клиента)<br>Новый заказ №17<br>Ахмед, +7 9XX XXX-XX-XX<br>Назрань, ул. ..., д. ..., 3 этаж<br>3 бутыли по 19 л, завтра 10:00–12:00<br>Ответьте «+», чтобы подтвердить<br><i>MAX российский, данные клиента остаются в России, поэтому адрес и телефон можно присылать прямо в сообщении. Открывать Instagram сотруднику не нужно.</i><br><br><b>Пример 3. Напоминание клиенту</b> (только при официальном подключении WhatsApp и только тем, кто согласился)<br>Здравствуйте! С прошлой доставки прошло две недели. Привезти воду, как в прошлый раз? Ответьте «Да»',
+  q:[
+    {id:'notify_where', type:'single', req:1, s:'Куда приходят заказы', title:'Куда сотрудникам присылать готовые заказы?', options:[
+      {v:'В WhatsApp', d:'Заказ без имени, адреса и телефона клиента. Их сотрудник смотрит в директе Instagram (пример 1)'},
+      {v:'В MAX', d:'Полный заказ в одном сообщении: имя, адрес, телефон, что и сколько (пример 2). Бесплатно, данные остаются в России. У сотрудников должен быть установлен MAX, подключается на вашу компанию'},
+      {v:'Посоветуйте'}
+    ]},
+    {id:'wa_mode', show:function(a){ return a.notify_where !== 'В MAX'; }, type:'single', req:1, s:'Подключение WhatsApp', title:'Как подключаем WhatsApp для уведомлений?', hint:'Это оплата сервису подключения, отдельно от стоимости агента. В обоих вариантах имя, телефон и адрес клиента через WhatsApp не пересылаются.', options:[
+      {v:WA.unoff, d:'Цена: ' + PRICE.waUnoff + '. Подходит, если нужны только уведомления своим сотрудникам о заказах (пример 1). С отдельной симки. Риск блокировки небольшой: номер блокируют за массовые рассылки и сообщения незнакомым людям, а не за уведомления сотрудникам'},
+      {v:WA.off, d:'Цена: ' + PRICE.waOff + '. Нужно, если хотите ещё и напоминать постоянным клиентам (пример 3). Бана нет. Нужны отдельный номер и проверка компании'},
+      {v:WA.dunno, d:'Подберу по вашим ответам'}
+    ]},
+    {id:'wa_to', type:'group', req:1, s:'Кому отправлять заказы', title:'На какие номера отправлять готовые заказы?', hint:'Можно указать до трёх сотрудников.', fields:[
+      {id:'n1', label:'Номер 1', ph:'+7 900 000-00-00', req:1, inputmode:'tel', type:'tel', check:'phone'},
+      {id:'n2', label:'Номер 2', ph:'+7 900 000-00-00', inputmode:'tel', type:'tel', check:'phone'},
+      {id:'n3', label:'Номер 3', ph:'+7 900 000-00-00', inputmode:'tel', type:'tel', check:'phone'}
+    ]},
+    {id:'sim', show:function(a){ return a.notify_where !== 'В MAX'; }, type:'single', req:1, s:'Номер для уведомлений', title:'Сможете выделить новую симку под рабочий номер WhatsApp, с которого будут приходить уведомления?', hint:'Основной номер компании для этого не используем.', options:['Да','Нужен совет']},
+    {id:'staff', type:'single', chips:1, req:1, s:'Сотрудников на заказах', title:'Сколько сотрудников принимают заказы?', options:['1','2','3 и больше']},
+    {id:'staff_hours', type:'text', req:1, s:'До какого часа работают', title:'До какого часа сотрудники подтверждают заказы?', ph:'До 20:00'},
+    {id:'btn_number', type:'text', s:'Номер на кнопке', title:'Какой номер ставим на кнопку WhatsApp в профиле Instagram?', hint:'По этой кнопке клиент сразу пишет вашим сотрудникам, минуя агента.', ph:'8 928 092-91-91', inputmode:'tel', check:'phone'},
+    {id:'remind', show:function(a){ return a.notify_where !== 'В MAX'; }, type:'single', s:'Напоминания клиентам', title:'Нужны ли напоминания постоянным клиентам, что пора заказать воду?', hint:'По закону такие сообщения можно отправлять только тем, кто заранее на это согласился (ч. 1 ст. 18 закона № 38-ФЗ). Делаем только через официальное подключение WhatsApp.', options:[REMIND_YES,'Нет, не нужно','Пока не знаем']}
+  ]
+},
+{
+  id:'account', nav:'Учёт заказов', title:'Учёт заказов', emoji:'📋',
+  lead:'Каждый заказ агент сохраняет в базу на сервере в России. Здесь решаем, что вам в ней нужно видеть.',
+  q:[
+    {id:'acc_now', type:'single', req:1, s:'Где ведут учёт', title:'Где сейчас ведёте учёт заказов?', options:['В тетради','В Excel или Google Таблице','В программе','Нигде, всё в переписке']},
+    {id:'acc_prog', type:'text', s:'Программа', title:'Как называется программа?', ph:'1С, МойСклад', show:function(a){ return a.acc_now === 'В программе'; }},
+    {id:'acc_see', type:'multi', s:'Что видеть в учёте', title:'Что хотите видеть в учёте?', hint:'Можно выбрать несколько.', options:['Все заказы за день','Кто и сколько заказывает','Повторные клиенты','Жалобы','Сколько заказов принёс агент']}
+  ]
+},
+{
+  id:'launch', nav:'Срок и контакт', title:'Срок и контакт', emoji:'📅',
+  lead:'Последний шаг. Полный пакет: ' + PRICE.agent + ' разово и ' + PRICE.month + ' сопровождение. Сервисы подключения Instagram и WhatsApp оплачиваются отдельно по их тарифам. Сначала я покажу вам демо, потом начинаем работу.',
+  q:[
+    {id:'deadline', type:'single', chips:1, req:1, s:'Когда запустить', title:'К какому сроку хотите запустить агента?', options:['Как можно скорее','В течение месяца','Через 1–2 месяца','Не горит']},
+    {id:'tester', type:'single', s:'Кто проверяет', title:'Кто будет проверять ответы агента перед запуском?', options:['Я сама','Сотрудник','Вместе']},
+    {id:'decision', type:'single', s:'Решение принимает', title:'Кто принимает решение?', options:['Я сама','Вместе с руководителем','Руководитель, я заполняю за него']},
+    {id:'person', type:'group', req:1, s:'Контактное лицо', title:'Как с вами связаться?', fields:[
+      {id:'pname', label:'Имя', ph:'Роза', req:1},
+      {id:'prole', label:'Должность', ph:'Директор по развитию'},
+      {id:'pphone', label:'Телефон', ph:'+7 900 000-00-00', req:1, inputmode:'tel', type:'tel', check:'phone'},
+      {id:'ptime', label:'Когда удобно созвониться', ph:'После 18:00'}
+    ]},
+    {id:'channel', type:'single', chips:1, s:'Где удобнее', title:'Где вам удобнее быть на связи?', options:['WhatsApp','Telegram','Звонок']},
+    {id:'extra', type:'textarea', s:'Дополнительно', title:'Что ещё важно знать?', hint:'Всё, что не вошло в вопросы выше.'}
+  ]
+}
+];
+
+/* ================= ИТОГ НА ФИНАЛЕ ================= */
+function recommend(a){
+  var why;
+  if(a.wa_mode === WA.off) why = 'WhatsApp: официальное подключение. Бана нет, можно напоминать клиентам, которые согласились.';
+  else if(a.wa_mode === WA.unoff) why = 'WhatsApp: неофициальное подключение с отдельной симки, только уведомления сотрудникам.';
+  else why = 'Вариант подключения WhatsApp подберу по вашим ответам.';
+  if(a.notify_where === 'В MAX') why = 'Заказы сотрудникам: MAX, полный заказ с именем, адресом и телефоном.';
+  return { label:'Ваш вариант', name:'ИИ-агент в Instagram · ' + PRICE.agent + ' + ' + PRICE.month, why:why };
+}
+function later(a){
+  var out = [];
+  if(a.remind === REMIND_YES && a.wa_mode === WA.unoff) out.push('напоминания клиентам (для них нужно официальное подключение WhatsApp)');
+  if(a.remind === 'Нет, не нужно') out.push('напоминания постоянным клиентам, которые согласились');
+  return out;
+}
+function head(a){
+  var p = a.person || {};
+  var who = [t(p.pname), t(p.prole), t(p.pphone)].filter(Boolean).join(', ');
+  return [t(a.name) ? 'Компания: ' + t(a.name) : '', who ? 'Контакт: ' + who : '', a.channel ? 'Удобная связь: ' + a.channel : '', a.notify_where ? 'Заказы сотрудникам: ' + a.notify_where : '', a.wa_mode && a.notify_where !== 'В MAX' ? 'WhatsApp: ' + a.wa_mode : ''];
+}
+
+window.BRIEF = { config:CONFIG, blocks:BLOCKS, recommend:recommend, later:later, head:head };
+})();
+
+</script>
+
+<script>
+(function(){
+'use strict';
+
+var S = window.BRIEF;            // описание брифа: настройки, блоки, вопросы
+var CONFIG = S.config;
+var BLOCKS = S.blocks;
+var FINAL = BLOCKS.length;
+
+function inc(v, x){ return Array.isArray(v) && v.indexOf(x) !== -1; }
+function optV(o){ return typeof o === 'string' ? o : o.v; }
+
+/* ================= ПРОВЕРКА ПОЛЕЙ ================= */
+function digits(v){ return String(v).replace(/\D/g, ''); }
+var CHECKS = {
+  phone: { msg:'Проверьте номер: нужно 10–15 цифр, например +7 900 000-00-00',
+    ok:function(v){ return /^[\d\s()+\-]+$/.test(v) && digits(v).length >= 10 && digits(v).length <= 15; } },
+  inn:   { msg:'ИНН: 10 цифр у организации или 12 цифр у ИП',
+    ok:function(v){ var d = digits(v); return /^[\d\s]+$/.test(v) && (d.length === 10 || d.length === 12); } },
+  ogrn:  { msg:'ОГРН: 13 цифр, ОГРНИП: 15 цифр',
+    ok:function(v){ var d = digits(v); return /^[\d\s]+$/.test(v) && (d.length === 13 || d.length === 15); } },
+  tg:    { msg:'Напишите ник через @ (от 5 символов), ссылку t.me/… или номер телефона',
+    ok:function(v){ v = v.trim(); return /^@?[A-Za-z0-9_]{5,32}$/.test(v) || /^(https?:\/\/)?(t\.me|telegram\.me)\/[A-Za-z0-9_+]{3,}\/?$/i.test(v) || CHECKS.phone.ok(v); } },
+  url:   { msg:'Похоже, это не адрес сайта. Пример: clinic.ru',
+    ok:function(v){ return /^(https?:\/\/)?([a-zа-яё0-9-]+\.)+[a-zа-яё]{2,}(:\d+)?(\/\S*)?$/i.test(v.trim()); } },
+  urls:  { msg:'Добавьте хотя бы одну ссылку, например clinic.ru',
+    ok:function(v){ return /([a-zа-яё0-9-]+\.)+[a-zа-яё]{2,}/i.test(v); } },
+  soc:   { msg:'Ссылка или @ник',
+    ok:function(v){ v = v.trim(); return /^@[A-Za-z0-9_.]{2,}$/.test(v) || CHECKS.url.ok(v); } },
+  email: { msg:'Проверьте почту, пример: clinic@mail.ru',
+    ok:function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); } }
+};
+function valOk(check, v){
+  if(!check || typeof v !== 'string' || !v.trim()) return true;
+  return CHECKS[check].ok(v);
+}
+function qInvalid(q){
+  var v = state.a[q.id];
+  if(q.type === 'group'){
+    if(!v) return [];
+    return q.fields.filter(function(f){ return f.check && !valOk(f.check, v[f.id]); });
+  }
+  if(q.check && !valOk(q.check, v)) return [q];
+  return [];
+}
+
+/* ================= СОСТОЯНИЕ ================= */
+var state = { a:{}, step:0, touched:{} };
+var Q = {};
+var sections = [];
+var sideBtns = [];
+var finalEls = {};
+var saveTimer = null;
+var hasStorage = (function(){ try{ var k='__t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } })();
+
+function load(){
+  if(!hasStorage) return false;
+  try{
+    var raw = localStorage.getItem(CONFIG.storageKey);
+    if(!raw) return false;
+    var d = JSON.parse(raw);
+    if(d && typeof d === 'object'){
+      state.a = d.a || {};
+      state.step = Math.min(Math.max(parseInt(d.step,10)||0, 0), FINAL);
+      state.touched = d.touched || {};
+      return Object.keys(state.a).length > 0;
+    }
+  }catch(e){}
+  return false;
+}
+function save(){
+  if(!hasStorage) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(function(){
+    try{
+      localStorage.setItem(CONFIG.storageKey, JSON.stringify(state));
+      var s = document.getElementById('mSaved');
+      if(s) s.textContent = 'Черновик сохранён';
+    }catch(e){}
+  }, 250);
+}
+
+/* ================= ПОМОЩНИКИ ================= */
+function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function trim(v){ return typeof v === 'string' ? v.trim() : ''; }
+function pad(n){ return n < 10 ? '0' + n : '' + n; }
+var CHECK = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.4l2.9 2.9 6-6.4" fill="none" stroke="#15306F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+var toastTimer = null;
+function toast(msg, ms){
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ t.classList.remove('show'); }, ms || 2600);
+}
+
+function isVisible(q){ return !q.show || !!q.show(state.a); }
+
+function fieldFilled(f, v){
+  if(!v) return false;
+  if(f.type === 'check') return v[f.id] === true;
+  return trim(v[f.id]).length > 0;
+}
+function isAnswered(q){
+  var v = state.a[q.id];
+  switch(q.type){
+    case 'text':
+    case 'textarea': return trim(v).length > 0;
+    case 'single': return !!v;
+    case 'multi': return Array.isArray(v) && v.length > 0;
+    case 'group':
+      if(!v || typeof v !== 'object') return false;
+      if(q.fields.some(function(f){ return f.type === 'check' && f.skip && v[f.id] === true; })) return true;
+      var filled = q.fields.filter(function(f){ return fieldFilled(f, v); });
+      if(q.any) return filled.length > 0;
+      var reqF = q.fields.filter(function(f){ return f.req; });
+      if(!reqF.length) return filled.length > 0;
+      return reqF.every(function(f){ return fieldFilled(f, v); });
+  }
+  return false;
+}
+function hasAny(q){
+  if(q.type === 'group'){
+    var v = state.a[q.id];
+    return !!v && q.fields.some(function(f){ return fieldFilled(f, v); });
+  }
+  return isAnswered(q);
+}
+
+function visibleQs(bi){ return BLOCKS[bi].info ? [] : BLOCKS[bi].q.filter(isVisible); }
+function missingIn(bi){ return visibleQs(bi).filter(function(q){ return q.req && !isAnswered(q); }); }
+function invalidIn(bi){ return visibleQs(bi).filter(function(q){ return qInvalid(q).length > 0; }); }
+
+/* ================= ОТРИСОВКА ВОПРОСОВ ================= */
+function autosize(ta){
+  if(!ta || ta.offsetParent === null) return;
+  ta.style.height = 'auto';
+  ta.style.height = Math.max(108, ta.scrollHeight + 3) + 'px';
+}
+
+function makeInput(q, field){
+  var isArea = !field && q.type === 'textarea';
+  var el = document.createElement(isArea ? 'textarea' : 'input');
+  el.className = 'inp';
+  if(!isArea) el.type = (field && field.type) || 'text';
+  var im = field ? field.inputmode : q.inputmode;
+  if(im) el.setAttribute('inputmode', im);
+  var ph = field ? field.ph : q.ph;
+  if(ph) el.placeholder = ph;
+  el.setAttribute('autocomplete', 'off');
+  if(field && field.type === 'tel') el.setAttribute('autocomplete','tel');
+  if(isArea) el.rows = 3;
+  return el;
+}
+
+// подсветка ошибки у конкретного поля: показываем после ухода из поля
+function bindCheck(inp, check, getVal){
+  if(!check) return null;
+  var err = document.createElement('div');
+  err.className = 'err';
+  err.setAttribute('role', 'alert');
+  err.textContent = CHECKS[check].msg;
+  function paint(){
+    var bad = inp.dataset.t === '1' && !valOk(check, getVal());
+    inp.classList.toggle('bad', bad);
+    inp.setAttribute('aria-invalid', bad ? 'true' : 'false');
+    err.classList.toggle('show', bad);
+  }
+  inp.addEventListener('blur', function(){ if(trim(inp.value)) inp.dataset.t = '1'; paint(); });
+  inp.addEventListener('input', paint);
+  inp._paint = function(){ if(trim(inp.value)) inp.dataset.t = '1'; paint(); };
+  return err;
+}
+
+function renderQuestion(q, bi){
+  var el = document.createElement('section');
+  el.className = 'q';
+  el.id = 'q-' + q.id;
+  el.innerHTML =
+    '<div class="qn" aria-hidden="true"></div>' +
+    '<div class="qc">' +
+      '<h3 class="qt" id="t-' + q.id + '">' + esc(q.title) + (q.req ? '<span class="req" aria-hidden="true">*</span><span class="sr">обязательный вопрос</span>' : '') + '</h3>' +
+      (q.hint ? '<p class="qh">' + esc(q.hint) + '</p>' : '') +
+      '<div class="qb"></div>' +
+      '<div class="need-msg">' + (q.type === 'group' && q.any ? 'Заполните хотя бы одно поле' : 'Обязательный вопрос, ответьте, пожалуйста') + '</div>' +
+    '</div>';
+  var body = el.querySelector('.qb');
+  var v = state.a[q.id];
+
+  if(q.type === 'text' || q.type === 'textarea'){
+    var inp = makeInput(q);
+    inp.setAttribute('aria-labelledby', 't-' + q.id);
+    inp.value = typeof v === 'string' ? v : '';
+    inp.addEventListener('input', function(){
+      if(inp.value.trim()) state.a[q.id] = inp.value; else delete state.a[q.id];
+      if(q.type === 'textarea') autosize(inp);
+      changed(q);
+    });
+    body.appendChild(inp);
+    var e1 = bindCheck(inp, q.check, function(){ return inp.value; });
+    if(e1) body.appendChild(e1);
+  }
+
+  if(q.type === 'single' || q.type === 'multi'){
+    var multi = q.type === 'multi';
+    var wrap = document.createElement('div');
+    wrap.className = 'opts' + (q.chips ? ' chips' : '');
+    wrap.setAttribute('role', multi ? 'group' : 'radiogroup');
+    wrap.setAttribute('aria-labelledby', 't-' + q.id);
+    q.options.forEach(function(o){
+      var val = optV(o);
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opt' + (multi ? ' multi' : '');
+      b.setAttribute('role', multi ? 'checkbox' : 'radio');
+      b.dataset.v = val;
+      var d = typeof o === 'object' && o.d ? '<span class="od">' + esc(o.d) + '</span>' : '';
+      var tag = typeof o === 'object' && o.tag ? '<span class="otag">' + esc(o.tag) + '</span>' : '';
+      b.innerHTML = '<span class="ind">' + (multi ? CHECK : '') + '</span><span class="ot"><span class="ov">' + esc(val) + '</span>' + d + '</span>' + tag;
+      b.addEventListener('click', function(){ pick(q, val); });
+      wrap.appendChild(b);
+    });
+    body.appendChild(wrap);
+    if(q.other){
+      var oi = document.createElement('input');
+      oi.type = 'text';
+      oi.className = 'inp other';
+      oi.placeholder = 'Уточните, что именно';
+      oi.setAttribute('aria-label', 'Уточнение к варианту «Другое»');
+      oi.value = state.a[q.id + '__other'] || '';
+      oi.addEventListener('input', function(){
+        if(oi.value.trim()) state.a[q.id + '__other'] = oi.value; else delete state.a[q.id + '__other'];
+        save();
+      });
+      body.appendChild(oi);
+    }
+  }
+
+  if(q.type === 'group'){
+    var g = document.createElement('div');
+    g.className = 'grid2';
+    q.fields.forEach(function(f){
+      var cur0 = v && typeof v === 'object' ? v : {};
+      if(f.type === 'check'){
+        var lc = document.createElement('label');
+        lc.className = 'chk fld full' + (cur0[f.id] === true ? ' on' : '');
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = cur0[f.id] === true;
+        lc.appendChild(cb);
+        var sp = document.createElement('span');
+        sp.textContent = f.label;
+        lc.appendChild(sp);
+        cb.addEventListener('change', function(){
+          var cur = state.a[q.id] && typeof state.a[q.id] === 'object' ? state.a[q.id] : {};
+          if(cb.checked) cur[f.id] = true; else delete cur[f.id];
+          lc.classList.toggle('on', cb.checked);
+          if(Object.keys(cur).length) state.a[q.id] = cur; else delete state.a[q.id];
+          changed(q);
+        });
+        g.appendChild(lc);
+        return;
+      }
+      var lab = document.createElement('label');
+      lab.className = 'fld' + (f.full ? ' full' : '');
+      lab.innerHTML = '<span class="fl">' + esc(f.label) + (f.req && !q.any ? '<span class="req" aria-hidden="true">*</span>' : '') + '</span>';
+      var inp = makeInput(q, f);
+      inp.value = cur0[f.id] || '';
+      inp.addEventListener('input', function(){
+        var cur = state.a[q.id] && typeof state.a[q.id] === 'object' ? state.a[q.id] : {};
+        if(inp.value.trim()) cur[f.id] = inp.value; else delete cur[f.id];
+        if(Object.keys(cur).length) state.a[q.id] = cur; else delete state.a[q.id];
+        changed(q);
+      });
+      lab.appendChild(inp);
+      var e2 = bindCheck(inp, f.check, function(){ return inp.value; });
+      if(e2) lab.appendChild(e2);
+      g.appendChild(lab);
+    });
+    body.appendChild(g);
+  }
+
+  Q[q.id] = { q:q, bi:bi, el:el };
+  syncOptions(q);
+  return el;
+}
+
+function pick(q, o){
+  var a = state.a;
+  if(q.type === 'single'){
+    if(a[q.id] === o) delete a[q.id]; else a[q.id] = o;
+  } else {
+    var arr = Array.isArray(a[q.id]) ? a[q.id].slice() : [];
+    var none = q.none || [];
+    var i = arr.indexOf(o);
+    if(i !== -1){ arr.splice(i, 1); }
+    else if(none.indexOf(o) !== -1){ arr = [o]; }       // «ничего», «не нужно» снимает остальное
+    else {
+      arr = arr.filter(function(x){ return none.indexOf(x) === -1; });
+      if(q.max && arr.length >= q.max){ toast('Можно выбрать до ' + q.max + '. Снимите один вариант, чтобы выбрать другой'); return; }
+      arr.push(o);
+    }
+    if(arr.length) a[q.id] = arr; else delete a[q.id];
+  }
+  syncOptions(q);
+  changed(q);
+}
+
+function syncOptions(q){
+  if(q.type !== 'single' && q.type !== 'multi') return;
+  var rec = Q[q.id]; if(!rec) return;
+  var v = state.a[q.id];
+  var btns = rec.el.querySelectorAll('.opt');
+  for(var i=0;i<btns.length;i++){
+    var o = btns[i].dataset.v;
+    var on = q.type === 'single' ? v === o : inc(v, o);
+    btns[i].classList.toggle('on', on);
+    btns[i].setAttribute('aria-checked', on ? 'true' : 'false');
+  }
+  if(q.other){
+    var oi = rec.el.querySelector('.other');
+    var showOther = q.type === 'single' ? v === 'Другое' : inc(v, 'Другое');
+    oi.hidden = !showOther;
+  }
+}
+
+/* ================= ОБНОВЛЕНИЯ ================= */
+function changed(){
+  refreshVisibility();
+  paintNeed();
+  updateCounts();
+  updateNav();
+  save();
+}
+
+function refreshVisibility(){
+  var n = 0;
+  BLOCKS.forEach(function(b){
+    if(b.info) return;
+    b.q.forEach(function(q){
+      var rec = Q[q.id];
+      var vis = isVisible(q);
+      if(rec.el.hidden === vis){
+        rec.el.hidden = !vis;
+        if(vis){ var ta = rec.el.querySelector('textarea'); if(ta) requestAnimationFrame(function(){ autosize(ta); }); }
+      }
+      if(vis){ n++; rec.el.querySelector('.qn').textContent = n; }
+    });
+  });
+  // время на блок пересчитываем, потому что вопросы появляются и исчезают
+  BLOCKS.forEach(function(b, bi){
+    if(b.info) return;
+    var eta = sections[bi] && sections[bi].querySelector('.eta');
+    if(eta) eta.textContent = ' · ≈ ' + Math.max(1, Math.round(visibleQs(bi).length * 0.4)) + ' мин';
+  });
+}
+
+function paintNeed(){
+  BLOCKS.forEach(function(b, bi){
+    if(b.info) return;
+    b.q.forEach(function(q){
+      var rec = Q[q.id];
+      var need = !!(q.req && state.touched[bi] && isVisible(q) && !isAnswered(q));
+      rec.el.classList.toggle('need', need);
+    });
+  });
+}
+
+function updateCounts(){
+  var total = 0, done = 0;
+  BLOCKS.forEach(function(b, bi){
+    var cnt = sideBtns[bi].querySelector('.cnt');
+    if(b.info){ cnt.textContent = ''; return; }
+    var vq = visibleQs(bi);
+    var d = vq.filter(hasAny).length;
+    total += vq.length; done += d;
+    var miss = missingIn(bi).length;
+    var hasReq = vq.some(function(q){ return q.req; });
+    cnt.className = 'cnt';
+    if(miss === 0 && hasReq && d > 0){ cnt.classList.add('done'); }
+    else if(miss > 0 && state.touched[bi]){ cnt.classList.add('miss'); }
+    cnt.textContent = d + '/' + vq.length;
+  });
+  document.getElementById('mDone').textContent = done;
+  document.getElementById('mTotal').textContent = total;
+  document.getElementById('mBar').style.width = (total ? Math.round(done / total * 100) : 0) + '%';
+}
+
+var ARROW = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function updateNav(){
+  var i = state.step;
+  var next = document.getElementById('next');
+  var label = 'Дальше';
+  if(i < FINAL){
+    if(BLOCKS[i].info) label = 'Начать';
+    else {
+      var vq = visibleQs(i);
+      var anyReq = vq.some(function(q){ return q.req; });
+      var anyDone = vq.some(hasAny);
+      if(!anyReq && !anyDone) label = 'Пропустить блок';
+      else if(i === FINAL - 1) label = 'К отправке';
+    }
+  }
+  next.innerHTML = label + ARROW;
+}
+
+/* ================= БЛОКИ И НАВИГАЦИЯ ================= */
+function buildSide(){
+  var side = document.getElementById('side');
+  BLOCKS.forEach(function(b, bi){
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'side-btn';
+    btn.innerHTML = '<span>' + esc(b.nav) + '</span><span class="cnt"></span>';
+    btn.addEventListener('click', function(){ goTo(bi, {fromSide:true}); });
+    side.appendChild(btn);
+    sideBtns.push(btn);
+  });
+  var fb = document.createElement('button');
+  fb.type = 'button';
+  fb.className = 'side-btn';
+  fb.innerHTML = '<span>Отправка</span><span class="cnt"></span>';
+  fb.addEventListener('click', function(){ goTo(FINAL, {fromSide:true}); });
+  side.appendChild(fb);
+  sideBtns.push(fb);
+}
+
+function buildBlocks(){
+  var main = document.getElementById('main');
+  var qBlocks = BLOCKS.filter(function(b){ return !b.info; }).length;
+  var k = 0;
+  BLOCKS.forEach(function(b, bi){
+    var s = document.createElement('div');
+    s.className = 'blk';
+    if(b.info){
+      s.innerHTML =
+        '<p class="kick"><b>00</b> · Как это устроено</p>' +
+        '<h2 class="blk-title">' + esc(b.title) + '</h2>' +
+        '<p class="lead">' + esc(b.lead) + '</p>' + b.info;
+    } else {
+      k++;
+      s.innerHTML =
+        '<p class="kick"><b>' + pad(k) + '</b> · Блок ' + k + ' из ' + qBlocks + '<span class="eta"></span></p>' +
+        '<h2 class="blk-title">' + esc(b.title) + '</h2>' +
+        '<p class="lead">' + esc(b.lead) + '</p>' +
+        (b.note ? '<div class="note">' + b.note + '</div>' : '');
+      b.q.forEach(function(q){ s.appendChild(renderQuestion(q, bi)); });
+    }
+    main.appendChild(s);
+    sections.push(s);
+  });
+
+  var f = document.createElement('div');
+  f.className = 'blk';
+  f.innerHTML =
+    '<p class="kick"><b>' + pad(qBlocks + 1) + '</b> · Финал</p>' +
+    '<h2 class="blk-title">Проверка и отправка</h2>' +
+    '<p class="lead">Проверьте ответы и отправьте мне удобным способом. Текст соберётся сам.</p>' +
+    '<div id="fRec"></div>' +
+    '<div class="status" id="fStatus"></div>' +
+    '<p class="sum-label">Ваши ответы по блокам</p>' +
+    '<div class="review" id="fReview"></div>' +
+    '<ol class="steps">' +
+      '<li><span><b>Нажмите «Отправить в WhatsApp» или «Отправить в Telegram».</b> Ответы скопируются, откроется чат со мной.</span></li>' +
+      '<li><span><b>Отправьте сообщение.</b> Если текст не появился в поле сам, вставьте его: он уже скопирован.</span></li>' +
+      '<li><span><b>Следом пришлите файлы:</b> ' + esc(CONFIG.filesHint) + ' Оригиналами, не скриншотами. Пароли в переписку не пишите, доступы передадим отдельно.</span></li>' +
+    '</ol>' +
+    '<p class="sum-label">Текст, который придёт мне</p>' +
+    '<textarea class="summary" id="fSummary" readonly aria-label="Текст брифа"></textarea>' +
+    '<div class="send">' +
+      '<button type="button" class="btn btn-main" id="sendWa">Отправить в WhatsApp</button>' +
+      '<button type="button" class="btn btn-main" id="sendTg">Отправить в Telegram</button>' +
+      '<button type="button" class="btn btn-light wide" id="copyOnly">Только скопировать текст</button>' +
+    '</div>' +
+    '<button type="button" class="reset" id="resetAll">Очистить ответы и начать заново</button>';
+  main.appendChild(f);
+  sections.push(f);
+  finalEls.rec = f.querySelector('#fRec');
+  finalEls.status = f.querySelector('#fStatus');
+  finalEls.review = f.querySelector('#fReview');
+  finalEls.summary = f.querySelector('#fSummary');
+  f.querySelector('#sendWa').addEventListener('click', sendWhatsApp);
+  f.querySelector('#sendTg').addEventListener('click', sendTelegram);
+  f.querySelector('#copyOnly').addEventListener('click', copyOnly);
+  f.querySelector('#resetAll').addEventListener('click', openReset);
+}
+
+function goTo(i, opts){
+  opts = opts || {};
+  var from = state.step;
+  if(from < FINAL && i > from && !BLOCKS[from].info){
+    state.touched[from] = true;
+    if(!opts.silent && i === from + 1 && i !== FINAL && missingIn(from).length){
+      toast('В блоке остались обязательные вопросы. Можно вернуться к ним позже', 3200);
+    }
+  }
+  if(i === FINAL){ for(var k=0;k<FINAL;k++) state.touched[k] = true; }
+  state.step = i;
+  show(i);
+  paintNeed();
+  updateCounts();
+  save();
+  if(!opts.keepScroll) window.scrollTo({ top:0, behavior: opts.instant ? 'auto' : 'smooth' });
+}
+
+function show(i){
+  sections.forEach(function(s, k){ s.classList.toggle('on', k === i); });
+  sideBtns.forEach(function(b, k){
+    b.classList.toggle('on', k === i);
+    if(k === i) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+  });
+  var side = document.getElementById('side');
+  var act = sideBtns[i];
+  if(side.scrollWidth > side.clientWidth && act){
+    side.scrollTo({ left: Math.max(0, act.offsetLeft - 16), behavior:'smooth' });
+  }
+  var tas = sections[i].querySelectorAll('textarea.inp');
+  requestAnimationFrame(function(){ for(var t=0;t<tas.length;t++) autosize(tas[t]); });
+
+  document.getElementById('prev').disabled = i === 0;
+  document.getElementById('next').hidden = i === FINAL;
+  updateNav();
+  if(i === FINAL) renderFinal();
+}
+
+/* ================= ФИНАЛ ================= */
+function numOf(q){ return Q[q.id].el.querySelector('.qn').textContent; }
+
+function renderFinal(){
+  // все поля с ошибками подсвечиваем сразу
+  Object.keys(Q).forEach(function(id){
+    var ins = Q[id].el.querySelectorAll('.inp');
+    for(var i=0;i<ins.length;i++) if(ins[i]._paint) ins[i]._paint();
+  });
+
+  var a = state.a;
+  var rec = S.recommend ? S.recommend(a) : null;
+  var later = S.later ? S.later(a) : [];
+  var rh = '';
+  if(rec || later.length){
+    rh = '<div class="rec">';
+    if(rec){
+      rh += '<div class="k">' + esc(rec.label || 'По вашим ответам подходит') + '</div><h3>' + esc(rec.name) + '</h3>';
+      if(rec.why) rh += '<p>' + esc(rec.why) + '</p>';
+    }
+    if(later.length){
+      rh += '<div' + (rec ? ' class="later"' : '') + '><div class="k">Можно добавить позже</div><p>' + esc(later.join(', ')) + '</p></div>';
+    }
+    rh += '</div>';
+  }
+  finalEls.rec.innerHTML = rh;
+
+  var miss = [], bad = [];
+  BLOCKS.forEach(function(b, bi){
+    missingIn(bi).forEach(function(q){ miss.push({ q:q, bi:bi }); });
+    invalidIn(bi).forEach(function(q){ bad.push({ q:q, bi:bi }); });
+  });
+  var st = finalEls.status;
+  st.innerHTML = '';
+  if(miss.length || bad.length){
+    st.className = 'status bad';
+    var h = [];
+    if(miss.length) h.push('Без ответа ' + miss.length + ' ' + plural(miss.length, ['обязательный вопрос','обязательных вопроса','обязательных вопросов']));
+    if(bad.length) h.push('проверьте ' + bad.length + ' ' + plural(bad.length, ['поле','поля','полей']));
+    var title = h.join(', ');
+    st.innerHTML = '<h3>' + esc(title.charAt(0).toUpperCase() + title.slice(1)) + '</h3>' +
+      '<p>Отправить можно и так, но с ответами всё получится точнее. Нажмите на вопрос, чтобы перейти к нему.</p>';
+    var list = document.createElement('div');
+    list.className = 'miss-list';
+    miss.concat(bad).forEach(function(m, idx){
+      var c = document.createElement('button');
+      c.type = 'button';
+      c.className = 'miss-chip';
+      c.textContent = numOf(m.q) + '. ' + (m.q.s || m.q.title) + (idx >= miss.length ? ': проверьте поле' : '');
+      c.addEventListener('click', function(){ jumpTo(m.q.id); });
+      list.appendChild(c);
+    });
+    st.appendChild(list);
+  } else {
+    st.className = 'status good';
+    st.innerHTML = '<h3>Все обязательные вопросы заполнены</h3><p>Осталось отправить. Спасибо, что ответили подробно.</p>';
+  }
+
+  // проверка по блокам с кнопкой «Изменить»
+  var rv = finalEls.review;
+  rv.innerHTML = '';
+  BLOCKS.forEach(function(b, bi){
+    if(b.info) return;
+    var vq = visibleQs(bi);
+    var d = vq.filter(hasAny).length;
+    var m = missingIn(bi).length + invalidIn(bi).length;
+    var row = document.createElement('div');
+    row.className = 'rv';
+    row.innerHTML = '<div class="rv-t">' + esc(b.title) + '<small' + (m ? ' class="bad"' : '') + '>Отвечено ' + d + ' из ' + vq.length + (m ? ', нужно поправить: ' + m : '') + '</small></div>';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rv-b';
+    btn.textContent = 'Изменить';
+    btn.addEventListener('click', function(){ goTo(bi); });
+    row.appendChild(btn);
+    rv.appendChild(row);
+  });
+
+  finalEls.summary.value = buildSummary();
+}
+
+function jumpTo(id){
+  var rec = Q[id];
+  goTo(rec.bi, { keepScroll:true, silent:true });
+  requestAnimationFrame(function(){
+    rec.el.scrollIntoView({ behavior:'smooth', block:'center' });
+    rec.el.classList.add('flash');
+    setTimeout(function(){ rec.el.classList.remove('flash'); }, 1800);
+  });
+}
+
+function plural(n, f){
+  var m10 = n % 10, m100 = n % 100;
+  if(m10 === 1 && m100 !== 11) return f[0];
+  if(m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return f[1];
+  return f[2];
+}
+
+function valueText(q){
+  var v = state.a[q.id];
+  var other = trim(state.a[q.id + '__other']);
+  switch(q.type){
+    case 'text':
+    case 'textarea': return trim(v);
+    case 'single': return (v === 'Другое' && other) ? 'Другое: ' + other : v;
+    case 'multi': return v.map(function(x){ return (x === 'Другое' && other) ? 'Другое: ' + other : x; }).join(', ');
+    case 'group': return q.fields.filter(function(f){ return fieldFilled(f, v); }).map(function(f){
+      return f.type === 'check' ? f.label : f.label + ': ' + trim(v[f.id]);
+    }).join('; ');
+  }
+  return '';
+}
+
+function buildSummary(){
+  var a = state.a;
+  var lines = [];
+  var total = 0, done = 0, skipped = 0, miss = [];
+  lines.push(CONFIG.summaryTitle);
+  S.head(a).forEach(function(l){ if(l) lines.push(l); });
+  lines.push('Дата: ' + new Date().toLocaleDateString('ru-RU'));
+  var body = [];
+  BLOCKS.forEach(function(b, bi){
+    if(b.info) return;
+    var part = [];
+    visibleQs(bi).forEach(function(q){
+      total++;
+      if(hasAny(q)){
+        done++;
+        var t = valueText(q).replace(/\r/g,'').replace(/\n+/g, '\n   ');
+        var badMark = qInvalid(q).length ? ' (проверить)' : '';
+        part.push('• ' + q.s + ': ' + t + badMark);
+        if(q.req && !isAnswered(q)) miss.push(numOf(q) + ' ' + q.s);
+      } else if(q.req){
+        miss.push(numOf(q) + ' ' + q.s);
+      } else {
+        skipped++;
+      }
+    });
+    if(part.length){
+      body.push('');
+      body.push(b.emoji + ' ' + b.title.toUpperCase());
+      body = body.concat(part);
+    }
+  });
+  lines.push('Заполнено: ' + done + ' из ' + total);
+  var rec = S.recommend ? S.recommend(a) : null;
+  if(rec) lines.push('👉 Подходит: ' + rec.name);
+  lines = lines.concat(body);
+  var later = S.later ? S.later(a) : [];
+  if(later.length){ lines.push(''); lines.push('➕ Можно добавить позже: ' + later.join(', ')); }
+  lines.push('');
+  if(miss.length) lines.push('⚠️ Без ответа: ' + miss.map(function(m){ return '№' + m; }).join(', '));
+  else lines.push('✅ Все обязательные вопросы заполнены');
+  if(skipped) lines.push('ℹ️ Необязательных пропущено: ' + skipped);
+  return lines.join('\n');
+}
+
+/* ================= КОПИРОВАНИЕ И ОТПРАВКА ================= */
+function legacyCopy(text){
+  var y = window.pageYOffset;
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:0;opacity:0;pointer-events:none;font-size:16px';
+  document.body.appendChild(ta);
+  try{ ta.focus({ preventScroll:true }); }catch(e){ ta.focus(); }
+  ta.select();
+  try{ ta.setSelectionRange(0, text.length); }catch(e){}
+  var ok = false;
+  try{ ok = document.execCommand('copy'); }catch(e){}
+  document.body.removeChild(ta);
+  if(window.getSelection) window.getSelection().removeAllRanges();
+  if(window.pageYOffset !== y) window.scrollTo(0, y);
+  return ok;
+}
+function copyText(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text).then(function(){ return true; }, function(){ return legacyCopy(text); });
+  }
+  return Promise.resolve(legacyCopy(text));
+}
+function openLink(url){
+  var link = document.createElement('a');
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+function freshText(){
+  var t = buildSummary();
+  finalEls.summary.value = t;
+  return t;
+}
+function sendWhatsApp(){
+  var text = freshText();
+  var p = copyText(text);
+  var url = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text);
+  var long = url.length > 30000;
+  if(long) url = 'https://wa.me/' + CONFIG.whatsapp;
+  openLink(url);
+  p.then(function(ok){
+    toast(long ? (ok ? 'Текст длинный: он скопирован, вставьте его в чат' : 'Скопируйте текст из поля и вставьте в чат')
+               : (ok ? 'Текст скопирован. Если он не появился в чате, вставьте его' : 'Открываю WhatsApp'), 3600);
+  });
+}
+function sendTelegram(){
+  var text = freshText();
+  var p = copyText(text);
+  openLink('https://t.me/' + CONFIG.telegram);
+  p.then(function(ok){
+    toast(ok ? 'Текст скопирован. Вставьте его в чат и отправьте' : 'Скопируйте текст из поля и вставьте в чат', 3600);
+  });
+}
+function copyOnly(){
+  var text = freshText();
+  copyText(text).then(function(ok){
+    toast(ok ? 'Скопировано' : 'Не получилось скопировать. Выделите текст в поле вручную');
+  });
+}
+
+/* ================= СБРОС ================= */
+var lastFocus = null;
+function openReset(){
+  var m = document.getElementById('resetModal');
+  lastFocus = document.activeElement;
+  m.classList.add('show');
+  m.setAttribute('aria-hidden','false');
+  setTimeout(function(){ try{ document.getElementById('resetNo').focus({ preventScroll:true }); }catch(e){} }, 50);
+}
+function closeReset(){
+  var m = document.getElementById('resetModal');
+  m.classList.remove('show');
+  m.setAttribute('aria-hidden','true');
+  if(lastFocus && lastFocus.focus){ try{ lastFocus.focus({ preventScroll:true }); }catch(e){} }
+}
+function doReset(){
+  clearTimeout(saveTimer);
+  try{ localStorage.removeItem(CONFIG.storageKey); }catch(e){}
+  state.a = {};
+  state.touched = {};
+  state.step = 0;
+  var fields = document.querySelectorAll('#main .inp');
+  for(var i=0;i<fields.length;i++){
+    fields[i].value = '';
+    fields[i].dataset.t = '';
+    if(fields[i]._paint){ fields[i].classList.remove('bad'); }
+    if(fields[i].tagName === 'TEXTAREA') fields[i].style.height = '';
+  }
+  var errs = document.querySelectorAll('#main .err');
+  for(var e=0;e<errs.length;e++) errs[e].classList.remove('show');
+  var cbs = document.querySelectorAll('#main .chk');
+  for(var c=0;c<cbs.length;c++){ cbs[c].classList.remove('on'); cbs[c].querySelector('input').checked = false; }
+  BLOCKS.forEach(function(b){ if(!b.info) b.q.forEach(function(q){ syncOptions(q); }); });
+  finalEls.summary.value = '';
+  refreshVisibility();
+  paintNeed();
+  updateCounts();
+  document.getElementById('mSaved').textContent = CONFIG.duration;
+  closeReset();
+  show(0);
+  window.scrollTo({ top:0, behavior:'auto' });
+  toast('Бриф очищен. Можно начинать заново');
+}
+
+/* ================= ЗАПУСК ================= */
+var restored = load();
+buildSide();
+buildBlocks();
+refreshVisibility();
+paintNeed();
+updateCounts();
+show(state.step);
+
+document.getElementById('resetNo').addEventListener('click', closeReset);
+document.getElementById('resetYes').addEventListener('click', doReset);
+document.getElementById('resetModal').addEventListener('click', function(e){ if(e.target === this) closeReset(); });
+document.addEventListener('keydown', function(e){
+  var m = document.getElementById('resetModal');
+  if(e.key === 'Escape' && m.classList.contains('show')) closeReset();
+});
+document.getElementById('prev').addEventListener('click', function(){ if(state.step > 0) goTo(state.step - 1); });
+document.getElementById('next').addEventListener('click', function(){ if(state.step < FINAL) goTo(state.step + 1); });
+window.addEventListener('resize', function(){
+  var tas = sections[state.step].querySelectorAll('textarea.inp');
+  for(var t=0;t<tas.length;t++) autosize(tas[t]);
+});
+if(restored){
+  document.getElementById('mSaved').textContent = 'Черновик сохранён';
+  setTimeout(function(){ toast('С возвращением! Ваши ответы на месте'); }, 400);
+}
+})();
+
+</script>
+</body>
+</html>
